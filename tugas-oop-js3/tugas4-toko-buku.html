@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas4 Toko Buku</title>
+</head>
+<body>
+    <p>Tugas Membuat Toko Buku Menggunakan Class Javascript</p>
+    <p id="hasil"></p>
+    
+    <script>
+        class Tokobuku {
+            constructor (idBuku, judulBuku, pengarangBuku) {
+                this.idBuku = idBuku;
+                this.judulBuku = judulBuku;
+                this.pengarangBuku = pengarangBuku;
+                this.halo = () => {
+                    console.log("Ini adalah arrow function");
+                }
+            }
+            get getIdBuku() {
+                return this.idBuku;
+            }
+            get getJudulBuku() {
+                return this.judulBuku;
+            }
+            get getPengarangBuku() {
+                return this.pengarangBuku;
+            }
+            get getDataBukulengkap() {
+                return this.judulBuku + " " + this.pengarangBuku;
+            }
+            tampil = () => {
+                return this.getDataBukulengkap;
+            }
+        }
+        
+        objBuku1 = new Tokobuku("001", "Sibuta Dari Goa Hantu", "Tatang Sutarman");
+        objBuku1.halo();
+        const hasil = document.getElementById("hasil");
+        let dataBuku1 = 
+        "ID Buku = " + objBuku1.getIdBuku + "<br>" +
+        "Judul Buku = " + objBuku1.getJudulBuku + "<br>" +
+        "Pengarang Buku = " + objBuku1.getPengarangBuku ;
+
+        objBuku2 = new Tokobuku("002", "Lutung Kasarung", "Tatang Sutarman");
+        let dataBuku2  = "<hr>" +
+        "ID Buku = " + objBuku2.getIdBuku + "<br>" +
+        "Judul Buku = " + objBuku2.getJudulBuku + "<br>" +
+        "Pengarang Buku = " + objBuku2.getPengarangBuku ;
+
+        hasil.innerHTML = dataBuku1 + dataBuku2;
+        alert(objBuku1.tampil());
+
+    </script>
+</body>
+</html>

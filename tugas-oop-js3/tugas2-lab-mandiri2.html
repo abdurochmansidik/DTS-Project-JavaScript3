@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas2 Lab Mandiri</title>
+</head>
+<body>
+    <p>Pengenalan Konsep Setter dan Getter</p>
+    <script>
+        //1. Membuat class Hewan dengan beberapa propertinya properti jenis merupakan getter / setter
+        class Hewan {
+            constructor(nama, jenis) {
+                this.nama = nama ;
+                this._jenis = null ;
+        
+        }
+        
+        //2. Menggunakan getter. sebelum data di return, properti ._jenis akan diolah dengan ditambahkan teks di depannya
+        get jenis () {
+            return `Jenis hewannya adalah ${this._jenis}`;
+        }
+        
+        //3. Pada bagian ini, jenis hewan diganti dari ${this._jenis} menjadi ${jenis} dan ditambahkan kalimat ‘anak’ di belakangnya
+        set jenis (jenis) {
+            this._jenis = `${jenis} anak`;
+        }
+    }
+
+    //4. Membuat object untuk class tersebut dengan menambahkan new    
+    const hewanKucing = new Hewan("Kucing", "Mamalia");
+    
+    //5. Mengubah nilai properti jenis menjadi melahirkan
+    hewanKucing.jenis = 'Melahirkan';
+
+    //6. Hasil console log hewan
+    console.log(hewanKucing.jenis);
+
+    </script>
+</body>
+</html>
+

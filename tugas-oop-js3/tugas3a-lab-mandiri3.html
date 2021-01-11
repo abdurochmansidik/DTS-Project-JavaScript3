@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas3a Lab Mandiri</title>
+</head>
+<body>
+    <p>Pengenalan Konsep Abstraksi</p>
+    <script>
+        //1. Membuat fungsi Jumlah untuk menghitung jumlah penumpang x harga tiket (14000).
+        function Jumlah (jmlh) {
+            var jmlh = jmlh;
+            var totalBiaya = function () {
+                return jmlh * 14000;
+            }
+
+            this.tampilBiaya = function() {
+                return totalBiaya ();
+            }
+        }
+
+        //2. Mengisi nilai jumlah, kemudian run dan lihat hasilnya.
+        const Penumpang = new Jumlah (4);
+        console.log (Penumpang.tampilBiaya());
+    </script>
+</body>
+</html>
+
+

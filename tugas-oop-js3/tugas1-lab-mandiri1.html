@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas1 Lab Mandiri</title>
+</head>
+<body>
+    <p>Pengenalan Class dan Objek</p>
+    <script>
+        //1. Membuat class bernama hewan
+        class Hewan {
+            //2. Dalam class hewan terdapat beberapa properti, yaitu nama, jenis
+            constructor (nama, jenis){
+                this.nama = nama;
+                this.jenis = jenis;
+            }
+        }
+        //3. Membuat object untuk class tersebut dengan menambahkan new
+        const hewanKucing = new Hewan ("Kucing", "Mamalia");
+
+        //4. mengubah nilai properti jenis menjadi melahirkan
+        hewanKucing.jenis = "Melahirkan";
+
+        //5. Hasil console log hewan
+        console.log(hewanKucing.nama)
+        console.log(hewanKucing.jenis)
+    </script>
+</body>
+</html>
+

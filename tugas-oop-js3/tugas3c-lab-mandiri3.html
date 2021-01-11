@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas3c Lab Mandiri</title>
+</head>
+<body>
+    <p>Pengenalan Konsep Polymorphism</p>
+    <script>
+        //1. Membuat class Transportasi dengan method jalur.
+        class Transportasi {
+              constructor (name) {
+                  this.name = name;
+              }
+      
+              jalur() {
+                  console.log(`${this.name} pergi dengan transportasi darat`);
+              }
+          }
+          
+          //2. Kemudian membuat class Persons sebagai child class dari Transportasi
+          //dengan dilengkapi method jalur juga, namun memiliki info yang berbeda dari
+          //method jalur yang dimiliki class Trasportasi.
+          class Persone extends Transportasi {
+              constructor(name) {
+                  super(name)
+              }
+
+              //3. Jika Menghilangkan jalur, maka class Person tidak memiliki method jalur, 
+              //maka ia akan menjalankan method jalur dari parent class classnya yaitu Trasportasi.
+              /*jalur() {
+                  console.log(`${this.name} pergi dengan transportasi udara`);
+              }*/
+          }
+          
+          //4. Isi nilai yang ada di class Persons,dan menampilkan hasilnya melalui seiya.jalur (). run
+          const seiya = new Persone ("Seiya");
+          console.log(seiya.jalur());
+      </script>
+</body>
+</html>
+

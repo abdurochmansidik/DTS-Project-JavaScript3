@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas3a Lab Mandiri</title>
+</head>
+<body>
+    <p>Pengenalan Konsep Pewarisan</p>
+    <script>
+
+        //1. Membuat class Vehicle. Ketika class Vehicle telah dibuat, 
+        //kelas lainnya dapat melakukan extends pada kelas tersebut untuk mewarisi sifatnya.
+        class Vehicle {
+            constructor(licensePlate, manufacture) {
+                this.licensePlate = licensePlate;
+                this.manufacture = manufacture;
+            }
+
+            info() {
+                console.log(`Nomor Kendaraan: ${this.licensePlate}`);
+                console.log(`Manufacture: ${this.manufacture}`);
+            }
+
+            parking() {
+                console.log(`kendaraan ${this.licensePlate} parkir!`);
+            }
+        }
+
+        //2. Kemudian membuat class Car sebagai child class dari Vehicle. 
+        //Pada JavaScript jika kita ingin mewariskan sifat class, lakukan dengan keyword extends.
+        class Car extends Vehicle {
+            constructor (licensePlate, manufacture, wheels) {
+                super(licensePlate, manufacture);
+                this.wheels = wheels;
+            }
+
+            droveOff() {
+                console.log(`kendaraan ${this.licensePlate} melaju!`);
+            }
+
+            openDoor() {
+                console.log (`Membuka pintu!`);
+            }
+
+            //3. Menambahkan overriding method ke dalam class Car.
+            /* overriding method info dari parent class */
+            info() {
+            super.info();
+            console.log(`Jumlah roda: ${this.wheels}`);
+            }
+        }
+
+        //4. Kemudian isi nilai yang ada di class Car, dan menampilkan hasilnya melalui car.info ().
+        const car = new Car ("H1215", "Honda", 4);
+        car.info ();
+    </script>
+</body>
+</html>
